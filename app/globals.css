@@ -255,3 +255,21 @@ input,select,textarea,[data-slot="native-select-wrapper"]{min-width:0;max-width:
 .invitation-families { display: flex; flex-direction: column; gap: .35rem; margin-bottom: .75rem; }
 .invitation-families p { font-variant: small-caps; letter-spacing: .045em; font-size: clamp(1rem, 2.2vw, 1.7rem); line-height: 1.45; }
 .invitation-families > span { font-family: Georgia, serif; font-style: italic; font-size: clamp(1.3rem, 2.4vw, 1.9rem); line-height: 1; }
+/* Keep the complete invitation compact, with a wider reading area. */
+.hero .invitation { width: min(100%, 52rem); }
+.invitation-content { margin: 24% 19%; gap: .15rem; }
+.hero .invitation .invitation-families p { margin: .1rem 0; line-height: 1.25; }
+.invitation-families { gap: .2rem; margin-bottom: .4rem; }
+.hero .invitation .invitation-intro { margin: .55rem 0; line-height: 1.4; }
+.hero .couple-names { margin: .35rem 0; font-size: clamp(2.6rem, 7vw, 4.7rem); }
+.hero .couple-names em { margin: .15rem 0; }
+.hero .ornament { margin: .4rem 0; }
+.hero .invitation p:not(.eyebrow) { margin-block: .4rem; }
+.hero .invitation p.date { margin-block: .65rem; padding-block: .4rem; }
+.hero .invitation .invitation-welcome { margin-block: .7rem; line-height: 1.45; }
+.hero .button { margin-block: .6rem; }
+@media (max-width: 34rem) {
+  .invitation-content { margin: 25% 17%; }
+  .hero .invitation .location { letter-spacing: .035em; }
+  .hero .invitation .invitation-welcome br { display: none; }
+}
