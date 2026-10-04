@@ -43,3 +43,12 @@ input:focus,textarea:focus,select:focus{outline-color:var(--color-gold-matte);bo
 :root{--color-gold-foil:#783F60;--color-gold-matte:#A26D85;--color-text-gold-dark:#4E293D}
 /* Fleurs bleu royal, sans modifier les fonds ni les accents prune. */
 .hero::before{background:#303DBB}
+/* Variante plus lumineuse et aérée. */
+:root{--color-bg-warm:#F8F5FC;--border:#DED5E8;--space-section:clamp(4rem,8vw,7.5rem)}
+.food,.calendar-section,.rsvp,.travel{background:var(--color-bg-warm)}
+.planner,.steps article,.textlink,.steps a,input,textarea,select,.planner input{border-color:var(--border)}
+.details{margin-top:3.5rem}
+form{gap:1.6rem}
+.form-grid{gap:1.5rem}
+.rsvp h2{margin-bottom:1.8rem}
+.calendar-section{padding:clamp(1.8rem,3.5vw,3.5rem)}
