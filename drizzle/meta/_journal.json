@@ -15,6 +15,13 @@
       "when": 1791072854700,
       "tag": "0001_pink_doorman",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1791129403262,
+      "tag": "0002_spooky_ben_urich",
+      "breakpoints": true
     }
   ]
 }

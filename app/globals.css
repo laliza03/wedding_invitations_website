@@ -134,3 +134,103 @@ input,textarea,select,[data-slot="native-select"]{border-radius:2px}
 .envelope-trigger:hover{box-shadow:0 0 0 4px #ffffff30,0 0 22px #ffffff40}
 .is-opening .envelope-flap{z-index:0}
 .is-opening .envelope-trigger{visibility:hidden}
+
+.hero .invitation .invitation-message{width:100%;align-self:center;text-align:center;margin-inline:auto;text-wrap:balance}
+
+/* Keep the calendar header independent of the page navigation styles. */
+.wedding-calendar .rdp-root{width:100%;color:var(--foreground)}
+.wedding-calendar .rdp-months{position:relative}
+.wedding-calendar .rdp-nav{position:absolute;inset:0 0 auto;min-height:0;height:3rem;padding:0;border:0;background:transparent;display:flex;align-items:center;justify-content:space-between}
+.wedding-calendar .rdp-month_caption{display:flex;align-items:center;justify-content:center;height:3rem;padding:0 3rem}
+.wedding-calendar .rdp-caption_label{display:block;visibility:visible;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.7rem;font-weight:600;text-transform:capitalize;color:var(--foreground)}
+.wedding-calendar .rdp-weekdays{display:flex;width:100%;margin:.5rem 0}
+.wedding-calendar .rdp-weekday{display:block;visibility:visible;flex:1;text-align:center;font-size:.8rem;font-weight:500;color:var(--foreground)}
+.wedding-calendar .rdp-month_grid{width:100%}
+.wedding-calendar .rdp-button_previous,.wedding-calendar .rdp-button_next{width:2.5rem;height:2.5rem;min-height:0;margin:0;padding:0;background:transparent}
+
+/* Royal blue botanical petals and gold foil accents. */
+:root{--accent-gold-foil:#D4AF37;--accent-gold-matte:#C5A059}
+.invitation{outline-color:var(--accent-gold-matte);box-shadow:0 22px 65px #4e293d12,0 0 25px #d4af3710}
+.hero .invitation p.date{border-color:var(--accent-gold-matte)}
+.ornament{color:var(--accent-gold-foil)}
+.button{border-color:var(--accent-gold-matte);box-shadow:0 4px 16px #d4af371a}
+.button:hover{border-color:var(--accent-gold-foil);box-shadow:0 5px 22px #d4af3730}
+.calendar-section{border-color:var(--accent-gold-matte);outline-color:#d4af3766}
+.food,.international{border-left-color:var(--accent-gold-foil)}
+.steps article{border-bottom-color:#c5a05980}
+.textlink,.steps a{border-bottom-color:var(--accent-gold-matte)}
+
+
+/* A single, brief opening breeze; scrolling removes this layer. */
+.wedding-atmosphere{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:60;contain:strict}
+.sakura-petal{position:absolute;left:var(--left);top:-8vh;width:var(--size);height:calc(var(--size)*1.4);clip-path:polygon(50% 100%,20% 75%,4% 45%,8% 18%,27% 2%,48% 14%,67% 0,90% 15%,100% 42%,82% 72%);background:linear-gradient(140deg,#f2eeff 8%,#b8c0f0 50%,#6271cf 100%);opacity:0;animation:sakura-breeze var(--duration) ease-in-out var(--delay) 1 forwards;will-change:transform}
+@keyframes sakura-breeze{0%{opacity:0;transform:translate3d(0,-5vh,0) rotate(0deg)}12%{opacity:.75}45%{transform:translate3d(calc(var(--drift)*-.4),45vh,0) rotate(calc(var(--turn)*.45)) rotateY(65deg)}80%{opacity:.65}100%{opacity:0;transform:translate3d(var(--drift),110vh,0) rotate(var(--turn)) rotateY(160deg)}}
+.button{border-color:transparent;box-shadow:none}
+button:hover,a.button:hover{outline:1px solid var(--accent-gold-foil);outline-offset:3px;box-shadow:0 0 0 3px #d4af3718;border-color:var(--accent-gold-foil)}
+button:focus-visible,a.button:focus-visible,input:focus,textarea:focus,select:focus,[data-slot="native-select"]:focus{outline:2px solid var(--accent-gold-foil);outline-offset:3px;border-color:var(--accent-gold-matte);box-shadow:0 0 0 5px #d4af3718}
+.envelope-trigger:hover{box-shadow:0 0 0 3px #d4af3735}
+@media(max-width:47.99rem){.sakura-petal:nth-child(n+9){display:none}}
+@media(prefers-reduced-motion:reduce){.wedding-atmosphere{display:none}}
+
+.hero .couple-names em{font-style:normal;font-size:.3em;letter-spacing:.15em;margin:.65rem 0}
+.envelope-letter i{font-style:normal;font-size:.4em;letter-spacing:.1em}
+
+.section article p,.food p,.travel>div>p,.planner p:not(.eyebrow),.rsvp>div>p,.international p:not(.eyebrow){text-align:justify;hyphens:auto;text-align-last:start}
+.wedding-footer{display:flex;align-items:center;justify-content:center;gap:clamp(1.5rem,5vw,4rem);padding:3.5rem 6%;background:var(--color-bg-warm);border-top:1px solid var(--accent-gold-matte)}
+.wedding-footer>img{width:clamp(9rem,22vw,14rem);height:auto;object-fit:contain}
+.wedding-footer>div{text-align:center;max-width:35rem}
+.wedding-footer .eyebrow{font-family:Montserrat,Arial,sans-serif;font-size:.7rem;margin:0 0 1rem}
+.wedding-footer h2{font-family:'Great Vibes',cursive;font-size:clamp(2.5rem,5vw,3.8rem)}
+.wedding-footer h2 em{font-family:'Cormorant Garamond',Georgia,serif;font-style:normal;font-size:.4em;letter-spacing:.1em}
+.wedding-footer p:not(.eyebrow){margin:1rem auto;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem}
+.wedding-footer small{font-family:Montserrat,Arial,sans-serif;font-size:.75rem}
+@media(max-width:34rem){.wedding-footer{flex-direction:column;gap:1rem}}
+
+.wedding-footer>img{width:clamp(16rem,34vw,25rem);max-width:100%;flex-shrink:0}
+@media(max-width:34rem){.wedding-footer>img{width:min(82vw,21rem)}}
+
+/* Size the stationery from its own width, keeping every line inside the floral frame. */
+.hero{padding:clamp(.75rem,3vw,2.5rem);width:100%;min-width:0}
+.hero .invitation{width:min(100%,43rem);padding:0;min-height:0;aspect-ratio:auto;display:flow-root;outline-offset:-8px}
+.invitation-content{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;margin:32% 22%;padding:0;background:var(--color-bg-pure);min-width:0}
+.invitation-content>*{max-width:100%;overflow-wrap:break-word}
+.hero .couple-names{font-size:clamp(2.6rem,8vw,5rem);line-height:1.1;width:100%}
+.hero .invitation .eyebrow{font-size:clamp(.6rem,1.5vw,.75rem);letter-spacing:.12em;line-height:1.6;margin:0 0 .8rem}
+.hero .invitation p:not(.eyebrow){font-size:clamp(.9rem,2.3vw,1.2rem);line-height:1.5;margin:.6rem 0}
+.hero .invitation p.date{font-size:clamp(1.25rem,3.5vw,1.8rem);padding:.6rem .2rem;margin:1rem 0}
+.hero .invitation .location{font-size:clamp(.75rem,2vw,.9rem);letter-spacing:.08em}
+.hero .button{white-space:normal;max-width:100%;font-size:clamp(.75rem,1.9vw,.9rem);padding:.65rem .8rem;margin:1rem 0}
+.hero small{font-size:clamp(.65rem,1.6vw,.75rem);line-height:1.6}
+.hero .ornament{margin:.8rem 0 .2rem}
+.section,.form-grid,.details,.calendar-section,.rsvp,.travel{min-width:0}
+.section>*{min-width:0}
+input,select,textarea,[data-slot="native-select-wrapper"]{min-width:0;max-width:100%}
+.wedding-footer{flex-wrap:wrap}
+.wedding-footer>div{flex:1 1 20rem;min-width:0}
+.wedding-calendar{width:min(100%,22rem);min-width:0}
+.wedding-calendar .rdp-root{width:100%}
+.wedding-calendar .rdp-week,.wedding-calendar .rdp-weekdays{display:flex;width:100%}
+.wedding-calendar .rdp-day{flex:1;min-width:0}
+.wedding-calendar .rdp-day button{min-width:0;width:100%;height:auto;aspect-ratio:1}
+@media(max-width:24rem){.invitation-content{margin-inline:19%}.hero .couple-names{font-size:2.5rem}.hero .invitation .eyebrow{letter-spacing:.04em}.section{padding-inline:1rem}.calendar-section{padding:1.1rem}}
+
+.opening-screen{overflow-y:auto;padding:1.5rem;min-height:100dvh}
+.envelope-scene{max-width:100%;margin-top:clamp(2rem,8vh,5rem)}
+
+/* Centre the travel section within equal, balanced columns. */
+#travel{grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;gap:clamp(2rem,5vw,4.5rem);padding-inline:max(1.25rem,calc((100% - 72rem)/2))}
+#travel>div{width:100%;min-width:0}
+#travel>div:first-child>.eyebrow,#travel h2{text-align:center;margin-inline:auto}
+#travel>div:first-child>p:not(.eyebrow){margin-inline:auto}
+#travel .planner{width:100%;max-width:36rem;margin:2rem auto}
+#travel .planner>.eyebrow,#travel .planner>h3{text-align:center}
+#travel .steps article{align-items:flex-start}
+#travel .steps article>div{flex:1;min-width:0}
+#travel .steps h3{text-align:center}
+#travel .steps p{max-width:none}
+#travel>div:first-child>.textlink{display:table;margin-inline:auto;text-align:center}
+@media(max-width:63.99rem){#travel{grid-template-columns:minmax(0,1fr)}#travel>div{max-width:42rem;margin-inline:auto}}
+
+.music-toggle{position:fixed;right:max(1rem,env(safe-area-inset-right));bottom:max(1rem,env(safe-area-inset-bottom));z-index:80;display:flex;align-items:center;gap:.5rem;border:1px solid var(--accent-gold-matte);border-radius:2rem;padding:.6rem .9rem;background:var(--color-bg-pure);color:var(--color-text-gold-dark);font-family:Montserrat,Arial,sans-serif;font-size:.75rem;box-shadow:0 3px 14px #4e293d12;cursor:pointer;max-width:calc(100vw - 2rem)}
+.music-toggle span{font-size:1.2rem;line-height:1}
+.wedding-footer{padding-bottom:5rem}

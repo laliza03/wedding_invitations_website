@@ -1,5 +1,5 @@
 // Dates locales à Laval. Renseigner les dates confirmées avant d'activer Google Agenda.
-export const wedding: {date:string|null;start:string|null;end:string|null;location:string} = {date:'2027-08-08',start:null,end:null,location:'Laval, Québec'};
+export const wedding: {date:string|null;start:string|null;end:string|null;location:string} = {date:'2027-08-08',start:null,end:null,location:'Salle de réception La Sirène, 480 boulevard Saint-Martin Ouest, Laval, Québec H7M 3Y2'};
 export function googleCalendarUrl(event:typeof wedding):string|null {
  if(!event.date)return null;
  const day=event.date.replaceAll('-','');

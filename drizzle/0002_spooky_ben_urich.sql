@@ -1,0 +1,1 @@
+ALTER TABLE `rsvps` ADD `notification_sent_at` text;

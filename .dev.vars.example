@@ -1,0 +1,3 @@
+# Copy to .dev.vars (ignored) for local preview. Never put keys in browser code.
+RESEND_API_KEY=
+RSVP_EMAIL_FROM=
