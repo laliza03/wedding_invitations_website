@@ -43,5 +43,3 @@ input:focus,textarea:focus,select:focus{outline-color:var(--color-gold-matte);bo
 :root{--color-gold-foil:#783F60;--color-gold-matte:#A26D85;--color-text-gold-dark:#4E293D}
 /* Les illustrations botaniques conservent leur or feuille. */
 .hero::before{background:#D4AF37}
-/* Fond mauve très clair, avec fleurs dorées et accents prune. */
-:root{--color-bg-pure:#F8F4FC;--color-bg-warm:#F1EAF7;--primary-foreground:#FFFFFF}
