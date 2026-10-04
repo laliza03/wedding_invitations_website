@@ -52,3 +52,12 @@ form{gap:1.6rem}
 .form-grid{gap:1.5rem}
 .rsvp h2{margin-bottom:1.8rem}
 .calendar-section{padding:clamp(1.8rem,3.5vw,3.5rem)}
+/* Une finition plus solennelle, inspirée de la papeterie de cérémonie. */
+.button,.nav-rsvp{border-radius:2px;box-shadow:none;letter-spacing:.06em}
+.food,.calendar-section,.planner,.international,.success{border-radius:2px}
+input,textarea,select,[data-slot="native-select"]{border-radius:2px}
+.calendar-section{border:1px solid var(--border);outline:1px solid var(--border);outline-offset:-9px}
+.food{border-left-width:1px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.hero .invitation .date{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.65rem,4.4vw,2.8rem);font-weight:600;letter-spacing:.035em;line-height:1.25;color:var(--color-text-gold-dark);border-block:1px solid var(--color-gold-matte);padding:.65rem .8rem;margin:1rem 0}
+.wedding-calendar>p{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:600;letter-spacing:.03em}
+@media(max-width:34rem){.hero .invitation .date{font-size:clamp(1.2rem,5.5vw,1.65rem);padding:.4rem .2rem;margin:.5rem 0;letter-spacing:.015em}}
