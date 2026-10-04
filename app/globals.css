@@ -101,3 +101,36 @@ input,textarea,select,[data-slot="native-select"]{border-radius:2px}
 .is-opening .card-cover{transform:rotateY(-135deg);box-shadow:0 5px 20px #4e293d10}.is-opening{opacity:0;pointer-events:none}
 @media(max-height:650px){.folding-card{width:min(60vw,15rem)}.cover-copy{gap:.6rem}.cover-names{font-size:2.2rem}.cover-intro{font-size:.875rem}.cover-date{font-size:1rem}.opening-screen{gap:.8rem}}
 @media(prefers-reduced-motion:reduce){.opening-screen,.card-cover{transition:none}.is-opening .card-cover{transform:none}}
+/* Enveloppe : rabat articulé et invitation qui sort de la pochette. */
+.opening-screen{gap:1.5rem;transition:opacity .55s ease 2.2s}
+.envelope-scene{position:relative;width:min(86vw,34rem);aspect-ratio:3 / 2;perspective:1600px;margin-top:clamp(3rem,12vh,7rem);margin-bottom:1rem;flex-shrink:0}
+.envelope-back{position:absolute;inset:4% 3%;background:#303DBB;box-shadow:0 22px 65px #4e293d24;border-radius:4px;z-index:0}
+.envelope-pocket{position:absolute;inset:0;background:url('/envelope-royal.png') center / 100% 100% no-repeat;clip-path:polygon(0 0,50% 59%,100% 0,100% 100%,0 100%);z-index:3;pointer-events:none}
+.envelope-trigger{position:absolute;inset:0;border:0;background:none;padding:0;cursor:pointer;z-index:4;perspective:1600px}
+.envelope-trigger:focus-visible{outline:3px solid var(--color-gold-matte);outline-offset:8px}
+.envelope-trigger:disabled{cursor:default}
+.envelope-flap{position:absolute;inset:0;background:url('/envelope-royal.png') center / 100% 100% no-repeat;clip-path:polygon(0 0,100% 0,50% 59%);transform-origin:center 4%;transition:transform 1s cubic-bezier(.2,.65,.3,1);backface-visibility:visible}
+.envelope-letter{position:absolute;inset:8% 11% 6%;z-index:1;background:var(--color-bg-pure);border:1px solid var(--border);outline:1px solid var(--border);outline-offset:-9px;box-shadow:0 8px 20px #4e293d12;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:1rem;text-align:center;transition:transform 1.15s cubic-bezier(.2,.65,.3,1) .8s}
+.envelope-letter>span{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(.9rem,2.5vw,1.25rem)}
+.envelope-letter p{font-family:'Great Vibes',cursive;font-size:clamp(2rem,6vw,3.4rem);line-height:1.05;margin:.7rem 0;color:var(--color-text-gold-dark)}
+.envelope-letter i{font-family:'Cormorant Garamond',Georgia,serif;font-size:.6em;font-weight:400}
+.envelope-instruction{font-size:.875rem;text-align:center;margin:0;max-width:28rem}
+.is-opening .envelope-flap{transform:rotateX(180deg)}
+.is-opening .envelope-trigger{z-index:0}
+.is-opening .envelope-letter{transform:translateY(-70%)}
+@media(max-height:650px){.envelope-scene{width:min(76vw,24rem);margin-top:3rem}.opening-screen{gap:.8rem}.envelope-letter p{font-size:2rem}}
+@media(prefers-reduced-motion:reduce){.envelope-flap,.envelope-letter,.opening-screen{transition:none}.is-opening .envelope-flap,.is-opening .envelope-letter{transform:none}}
+
+/* The paper artwork is split along the flap so the envelope opens in depth. */
+.envelope-scene{aspect-ratio:5 / 3}
+.envelope-back{inset:0;background:linear-gradient(135deg,#26329e,#4753c1);border-radius:3px}
+.envelope-pocket,.envelope-flap{background-size:105.5% 117.6%;background-position:center}
+.envelope-pocket{clip-path:polygon(0 0,43% 61%,43% 76%,57% 76%,57% 61%,100% 0,100% 100%,0 100%)}
+.envelope-flap{clip-path:polygon(0 0,100% 0,57% 61%,57% 76%,43% 76%,43% 61%);transform-origin:center top}
+.envelope-letter{inset:8% 11% 6%}
+
+.envelope-flap{z-index:4;pointer-events:none}
+.envelope-trigger{inset:auto;left:42%;top:51%;width:16%;height:27%;border-radius:50%;z-index:5;transition:box-shadow .25s}
+.envelope-trigger:hover{box-shadow:0 0 0 4px #ffffff30,0 0 22px #ffffff40}
+.is-opening .envelope-flap{z-index:0}
+.is-opening .envelope-trigger{visibility:hidden}
