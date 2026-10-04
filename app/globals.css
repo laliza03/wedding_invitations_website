@@ -21,3 +21,21 @@
 :root{--background:#fdfcf5}
 .hero{background-image:none;isolation:isolate}
 .hero::before{content:'';position:absolute;inset:0;z-index:-1;background:url('/floral-royal.png') center / 100% 100% no-repeat;filter:brightness(1.02)}
+/* Variante blanc et or. */
+:root{
+ --color-bg-pure:#FFFFFF;--color-bg-warm:#FAF9F6;--color-gold-foil:#D4AF37;--color-gold-matte:#C5A059;--color-text-gold-dark:#5C4B27;
+ --background:var(--color-bg-pure);--foreground:var(--color-text-gold-dark);--royal:var(--color-text-gold-dark);--burgundy:var(--color-text-gold-dark);--gold:var(--color-gold-matte);--border:var(--color-gold-matte);--primary:var(--color-text-gold-dark);--primary-foreground:var(--color-bg-pure);--ring:var(--color-gold-matte);--accent:var(--color-bg-warm)
+}
+@theme inline{--color-muted-foreground:var(--color-text-gold-dark)}
+.hero::before{background:var(--color-gold-foil);filter:none;mask-image:linear-gradient(#fff,#fff),url('/floral-royal.png');mask-size:100% 100%;mask-position:center;mask-repeat:no-repeat;mask-mode:luminance;mask-composite:exclude}
+.food,.calendar-section,.rsvp,.travel{background:var(--color-bg-warm);color:var(--color-text-gold-dark)}
+.travel h2,.travel em,.travel p,.travel .eyebrow,.steps span,.planner label,.rsvp small,.international .eyebrow,.wedding-calendar .rdp-outside button{color:var(--color-text-gold-dark)}
+.eyebrow,.details span{color:var(--color-text-gold-dark)}
+.ornament{color:var(--color-gold-foil)}
+.button{background:var(--color-text-gold-dark);color:var(--color-bg-pure);border-color:var(--color-gold-foil);box-shadow:0 6px 22px #5c4b2714}
+.button:hover{background:var(--color-bg-warm);color:var(--color-text-gold-dark);border-color:var(--color-gold-matte)}
+input,textarea,select,.planner input{background:var(--color-bg-pure);color:var(--color-text-gold-dark);border-color:var(--color-gold-matte);color-scheme:light}
+input:focus,textarea:focus,select:focus{outline-color:var(--color-gold-matte);box-shadow:0 0 0 5px #d4af3714}
+.planner,.steps article,.textlink,.steps a{border-color:var(--color-gold-matte)}
+.planner,.international,.success{background:var(--color-bg-pure)}
+.wedding-calendar .rdp-selected button,.wedding-calendar button[data-selected-single="true"]{background:var(--color-text-gold-dark);color:var(--color-bg-pure)}
