@@ -41,5 +41,3 @@ input:focus,textarea:focus,select:focus{outline-color:var(--color-gold-matte);bo
 .wedding-calendar .rdp-selected button,.wedding-calendar button[data-selected-single="true"]{background:var(--color-text-gold-dark);color:var(--color-bg-pure)}
 /* Accents bordeaux prune sur les fonds blanc et albâtre. */
 :root{--color-gold-foil:#783F60;--color-gold-matte:#A26D85;--color-text-gold-dark:#4E293D}
-/* Les illustrations botaniques conservent leur or feuille. */
-.hero::before{background:#D4AF37}
