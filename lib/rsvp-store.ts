@@ -3,7 +3,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import type { RsvpEmailData } from './rsvp-email';
 
-const local = () => !process.env.BLOB_READ_WRITE_TOKEN && process.env.NODE_ENV !== 'production' && !process.env.VERCEL;
+const local = () => !process.env.BLOB_READ_WRITE_TOKEN && !process.env.VERCEL && (process.env.NODE_ENV !== 'production' || process.env.RSVP_LOCAL_STORAGE === 'true');
 async function read<T>(path: string): Promise<T | null> {
   if (local()) {
     try { return JSON.parse(await readFile(join(process.cwd(), '.data', path), 'utf8')); }

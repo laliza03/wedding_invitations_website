@@ -9,6 +9,8 @@ test('storage preserves original response on retries and persists sent marker', 
   const directory = await mkdtemp(join(tmpdir(), 'wedding-store-'));
   const token = process.env.BLOB_READ_WRITE_TOKEN;
   const mode = process.env.NODE_ENV;
+  const localStorage = process.env.RSVP_LOCAL_STORAGE;
+  delete process.env.RSVP_LOCAL_STORAGE;
   delete process.env.BLOB_READ_WRITE_TOKEN;
   process.env.NODE_ENV = 'development';
   process.chdir(directory);
@@ -21,8 +23,11 @@ test('storage preserves original response on retries and persists sent marker', 
     assert.equal(await notificationSent(value.id), true);
     process.env.NODE_ENV = 'production';
     await assert.rejects(() => saveRsvp(value), /configuration missing/);
+    process.env.RSVP_LOCAL_STORAGE = 'true';
+    assert.equal((await saveRsvp({...value,id:'production-preview'})).id, 'production-preview');
   } finally {
     process.chdir(original);
+    if(localStorage === undefined) delete process.env.RSVP_LOCAL_STORAGE; else process.env.RSVP_LOCAL_STORAGE = localStorage;
     if(token === undefined) delete process.env.BLOB_READ_WRITE_TOKEN; else process.env.BLOB_READ_WRITE_TOKEN = token;
     if(mode === undefined) delete process.env.NODE_ENV; else process.env.NODE_ENV = mode;
     await rm(directory, {recursive:true,force:true});
