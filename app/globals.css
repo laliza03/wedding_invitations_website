@@ -1094,3 +1094,10 @@ main #travel.section { display:block; text-align:center; }
 main #travel.section > div { width:100%; max-width:44rem; margin-inline:auto; }
 main #travel.section > div > p { width:100%; text-align:center; margin-inline:auto; }
 main #travel.section .visa-links { width:100%; align-items:center; text-align:center; margin-inline:auto; }
+
+.footer-countdown{margin-top:1.25rem;text-align:center}.footer-countdown-units{display:flex;justify-content:center;gap:clamp(.75rem,3vw,1.5rem)}.footer-countdown-units>div{display:flex;flex-direction:column;gap:.25rem}.footer-countdown-units strong{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,6vw,2.5rem);font-weight:600;line-height:1;font-variant-numeric:tabular-nums}.footer-countdown-units span{font-size:.7rem;letter-spacing:.04em}.footer-countdown p{margin-top:.85rem;font-size:.9rem}
+
+/* Reserve clear space for the bottom bouquet, including the shifted copy. */
+.hero { --bottom-bouquet-height:clamp(9rem,43vw,13.5rem); padding-bottom:calc(var(--bottom-bouquet-height) + 4.25rem); }
+.hero .stationery-sprig.sprig-bottom { height:var(--bottom-bouquet-height); }
+@media(max-width:767px) { .hero { --bottom-bouquet-height:calc((100vw - 1.25rem) * .43); } }
